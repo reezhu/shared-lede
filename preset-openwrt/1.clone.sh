@@ -14,6 +14,7 @@ mv ./openwrt/* ./
 
 # 下载插件
 SUPPLY_DIR=supply-packages
+echo "src-git liuran001_packages https://github.com/liuran001/openwrt-packages" >> feeds.conf.default
 echo "src-link supply $PWD/$SUPPLY_DIR" >> feeds.conf.default
 mkdir $SUPPLY_DIR && cd $SUPPLY_DIR
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon.git
